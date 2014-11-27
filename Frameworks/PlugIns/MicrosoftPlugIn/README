@@ -1,0 +1,18 @@
+This is a clone of Chuck Hills MicrosoftPlugIn (formerly SQLServerPlugIn) I made in 2010.
+
+
+
+Enhancements/Hacks:
+
+Support for NVARCHARS and NTEXT:  I had to modify EOJDBCMicrosoftPrototypes.plist and Resources/JDBCInfo.plist to store UTF-8 String _and_ to use migrations + prototypes... 
+
+
+TODO:
+
+* Update to WO 5.4 EOSchemaGeneration
+
+
+
+
+René
+

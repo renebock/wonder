@@ -1,0 +1,5 @@
+Microsoft.SQLHelper=er.extensions.jdbc.MicrosoftSQLHelper
+er.extensions.ERXSQLHelper.Microsoft.jdbcType.-15=nchar
+er.extensions.ERXSQLHelper.Microsoft.jdbcType.-9=nvarchar
+#er.extensions.ERXSQLHelper.Microsoft.jdbcType.12=nvarchar
+er.extensions.ERXSQLHelper.Microsoft.jdbcType.-16=ntext
