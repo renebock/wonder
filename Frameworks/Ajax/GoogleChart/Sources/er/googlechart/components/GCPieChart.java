@@ -37,6 +37,7 @@ import er.extensions.foundation.ERXMutableURL;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCPieChart extends GCAbstractChart {
   protected WOAssociation _labels;
 

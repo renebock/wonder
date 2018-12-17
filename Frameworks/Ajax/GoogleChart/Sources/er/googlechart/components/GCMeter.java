@@ -37,6 +37,7 @@ import er.googlechart.util.GCTextEncoding;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCMeter extends GCAbstractChart {
   protected WOAssociation _label;
 

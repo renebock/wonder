@@ -47,6 +47,7 @@ import er.extensions.foundation.ERXMutableURL;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCSparkline extends GCLineChart {
   public GCSparkline(String name, NSDictionary associations, WOElement element) {
     super(name, associations, element);

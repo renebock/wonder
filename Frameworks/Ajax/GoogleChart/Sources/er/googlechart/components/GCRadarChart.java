@@ -46,6 +46,7 @@ import er.extensions.foundation.ERXMutableURL;
  * 
  * @author mschrag
  */
+@Deprecated
 public class GCRadarChart extends GCAbstractChart {
   protected WOAssociation _spline;
 

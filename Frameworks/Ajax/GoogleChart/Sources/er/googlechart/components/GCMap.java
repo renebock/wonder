@@ -37,6 +37,7 @@ import er.googlechart.util.GCTextEncoding;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCMap extends GCAbstractChart {
   protected WOAssociation _area;
   protected WOAssociation _regions;

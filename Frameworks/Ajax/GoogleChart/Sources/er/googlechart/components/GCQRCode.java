@@ -26,6 +26,7 @@ import er.extensions.foundation.ERXMutableURL;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCQRCode extends GCAbstractChart {
   protected WOAssociation _text;
   protected WOAssociation _outputEncoding;

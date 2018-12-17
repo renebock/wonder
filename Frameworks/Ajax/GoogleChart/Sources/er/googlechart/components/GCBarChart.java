@@ -53,6 +53,7 @@ import er.extensions.foundation.ERXMutableURL;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCBarChart extends GCAbstractChart {
   protected WOAssociation _orientation;
   protected WOAssociation _stacked;

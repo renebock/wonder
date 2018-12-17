@@ -34,6 +34,7 @@ import er.extensions.foundation.ERXMutableURL;
  *  
  * @author mschrag
  */
+@Deprecated
 public class GCPie3DChart extends GCPieChart {
   public GCPie3DChart(String name, NSDictionary associations, WOElement element) {
     super(name, associations, element);

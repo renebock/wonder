@@ -39,6 +39,7 @@ import er.extensions.foundation.ERXMutableURL;
  * 
  * @author mschrag
  */
+@Deprecated
 public class GCVennDiagram extends GCAbstractChart {
   public GCVennDiagram(String name, NSDictionary associations, WOElement element) {
     super(name, associations, element);

@@ -61,6 +61,7 @@ import er.googlechart.util.GCTextEncoding;
  *  
  * @author mschrag
  */
+@Deprecated
 public abstract class GCAbstractChart extends WODynamicElement {
   protected WOAssociation _data;
   protected WOAssociation _size;
