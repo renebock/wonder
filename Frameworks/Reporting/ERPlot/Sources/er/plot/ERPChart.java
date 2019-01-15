@@ -4,10 +4,10 @@ import java.io.ByteArrayOutputStream;
 import java.util.Enumeration;
 
 import org.jfree.chart.ChartRenderingInfo;
-import org.jfree.chart.ChartUtilities;
+import org.jfree.chart.ChartUtils;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.entity.StandardEntityCollection;
-import org.jfree.chart.imagemap.ImageMapUtilities;
+import org.jfree.chart.imagemap.ImageMapUtils;
 import org.jfree.chart.imagemap.ToolTipTagFragmentGenerator;
 import org.jfree.chart.imagemap.URLTagFragmentGenerator;
 import org.jfree.data.general.Dataset;
@@ -231,9 +231,9 @@ public abstract class ERPChart extends ERXStatelessComponent {
                         info = new ChartRenderingInfo(new StandardEntityCollection());
                     }
                     if("image/jpeg".equals(imageType())) {
-                        ChartUtilities.writeChartAsJPEG(imageStream, chart, width(), height(), info);
+                    	ChartUtils.writeChartAsJPEG(imageStream, chart, width(), height(), info);
                     } else {
-                        ChartUtilities.writeChartAsPNG(imageStream, chart, width(), height(), info, true, 0);
+                    	ChartUtils.writeChartAsPNG(imageStream, chart, width(), height(), info, true, 0);
                     }
                     if(showToolTips() || showUrls()) {
                         _imageMapName = "ERP" + System.identityHashCode(chart);
@@ -253,10 +253,7 @@ public abstract class ERPChart extends ERXStatelessComponent {
                                 }
                             };
                         }
-                        // for jfreechart-1.0.x use this line
-						 _imageMap = ImageMapUtilities.getImageMap(_imageMapName, info, toolTipGenerator, urlTagFragmentGenerator);
-						// for jfreechart-0.9.x use this line
-                        // _imageMap = ImageMapUtil.getImageMap(_imageMapName, info, toolTipGenerator, urlTagFragmentGenerator);
+                        _imageMap = ImageMapUtils.getImageMap(_imageMapName, info, toolTipGenerator, urlTagFragmentGenerator);
                     }
                     _imageData = new NSData(imageStream.toByteArray());
                 }
