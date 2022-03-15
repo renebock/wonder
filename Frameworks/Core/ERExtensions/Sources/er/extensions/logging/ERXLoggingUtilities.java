@@ -105,9 +105,6 @@ public class ERXLoggingUtilities {
 
     private static ERXLoggingAdapter createLoggingAdapterFor(Slf4jBinding binding) {
         switch (binding) {
-            case LOG4J_1:
-            case RELOAD4J:
-                return new ERXLog4j1LoggingAdapter();
             case LOG4J_2:
                 return new ERXLog4j2LoggingAdapter();
             case LOGBACK:
