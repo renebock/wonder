@@ -540,7 +540,7 @@ public abstract class ERXApplication extends ERXAjaxApplication implements ERXGr
 											Node natureNode = natureContainerNode.getFirstChild();
 											String nodeValue = natureNode.getNodeValue();
 											// AK: we don't actually add apps to the bundle process (Mike, why not!?)
-											if (nodeValue != null && nodeValue.startsWith("org.objectstyle.wolips.") && !nodeValue.contains("application")) {
+											if (nodeValue != null && nodeValue.startsWith("org.objectstyle.wolips.") /* && !nodeValue.contains("application") */) {
 												isBundle = true;
 											}
 										}
