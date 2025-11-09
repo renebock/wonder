@@ -524,7 +524,7 @@ public abstract class ERXApplication extends ERXAjaxApplication implements ERXGr
 						}
 						// MS: This is totally hacked in to make Wonder startup properly with the new rapid turnaround. It's duplicating (poorly)
 						// code from NSProjectBundle. I'm not sure we actually need this anymore, because NSBundle now fires an "all bundles loaded" event.
-						else if (jar.endsWith("/bin") && new File(new File(jar).getParentFile(), ".project").exists()) {
+						else if ((jar.endsWith("/bin") && new File(new File(jar).getParentFile(), ".project").exists()) || (jar.endsWith("/target/classes") && new File(new File(jar).getParentFile().getParentFile(), ".project").exists())) {
 							// AK: I have no idea if this is checked anywhere else, but this keeps is from having to set it in the VM args.
 							debugMsg("Plain bundle: " + jar);
 							for (File classpathFolder = new File(bundle); classpathFolder != null && classpathFolder.exists(); classpathFolder = classpathFolder.getParentFile()) {
@@ -540,7 +540,7 @@ public abstract class ERXApplication extends ERXAjaxApplication implements ERXGr
 											Node natureNode = natureContainerNode.getFirstChild();
 											String nodeValue = natureNode.getNodeValue();
 											// AK: we don't actually add apps to the bundle process (Mike, why not!?)
-											if (nodeValue != null && nodeValue.startsWith("org.objectstyle.wolips.") && !nodeValue.contains("application")) {
+											if (nodeValue != null && nodeValue.startsWith("org.objectstyle.wolips.") /* && !nodeValue.contains("application") */) {
 												isBundle = true;
 											}
 										}
